@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>강범서 | IAM 솔루션 리드</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  padding: 40px 20px;
+}
+.resume {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: white;
+  padding: 48px 40px;
+}
+.header h1 {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+.header .badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 14px;
+  margin-top: 12px;
+  font-weight: 500;
+}
+.header .contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+}
+.header .contact span { display: flex; align-items: center; gap: 6px; }
+/* Positioning */
+.positioning {
+  background: #f8f9ff;
+  padding: 28px 40px;
+  border-left: 4px solid #0f3460;
+}
+.positioning p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+.positioning .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.positioning .tag {
+  background: #0f3460;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+}
+/* Sections */
+.section { padding: 32px 40px; }
+.section + .section { border-top: 1px solid #e8e8e8; }
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f3460;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background: #0f3460;
+  border-radius: 2px;
+}
+/* Key achievements */
+.achievements { display: grid; gap: 16px; }
+.achievement {
+  background: #f8f9ff;
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+.achievement .ach-title { font-weight: 600; font-size: 15px; color: #0f3460; }
+.achievement .ach-desc { font-size: 14px; color: #555; margin-top: 4px; line-height: 1.6; }
+.achievement .ach-icon { font-size: 20px; margin-right: 8px; }
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.skill-group { background: #fafafa; border-radius: 10px; padding: 16px; }
+.skill-group h4 { font-size: 14px; font-weight: 600; color: #0f3460; margin-bottom: 8px; }
+.skill-group .skill-item { display: flex; align-items: center; justify-content: space-between; padding: 4px 0; font-size: 14px; }
+.skill-group .skill-item .name { color: #333; }
+.skill-group .skill-item .level { color: #888; font-size: 12px; }
+.stars { color: #f0b429; letter-spacing: 1px; }
+/* Experience */
+.exp-item { margin-bottom: 24px; }
+.exp-item:last-child { margin-bottom: 0; }
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.exp-header .exp-company { font-weight: 700; font-size: 16px; color: #1a1a2e; }
+.exp-header .exp-role { font-size: 14px; color: #0f3460; font-weight: 500; }
+.exp-header .exp-date { font-size: 13px; color: #888; }
+.exp-detail { padding-left: 0; margin-top: 8px; }
+.exp-detail li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+  list-style: none;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 4px;
+}
+.exp-detail li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #0f3460;
+}
+.exp-sub { font-weight: 600; color: #333; margin-top: 10px; margin-bottom: 4px; font-size: 14px; }
+.highlight { color: #0f3460; font-weight: 600; }
+.num-highlight { color: #e63946; font-weight: 700; }
+/* Education */
+.edu-row { display: flex; justify-content: space-between; padding: 8px 0; font-size: 14px; border-bottom: 1px solid #f0f0f0; }
+.edu-row:last-child { border: none; }
+.edu-row .edu-school { font-weight: 500; }
+.edu-row .edu-major { color: #555; }
+.edu-row .edu-date { color: #888; }
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 24px;
+  background: #fafafa;
+  color: #999;
+  font-size: 13px;
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .header { padding: 32px 20px; }
+  .section { padding: 24px 20px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .header .contact { flex-direction: column; gap: 8px; }
+}
+</style>
+</head>
+<body>
+<div class="resume">
+  <!-- Header -->
+  <div class="header">
+    <h1>강범서</h1>
+    <div class="badge">IAM / 계정보안 솔루션 리드</div>
+    <div class="contact">
+      <span>📧 soe09@naver.com</span>
+      <span>📱 010-2609-4129</span>
+      <span>📍 인천 미추홀구</span>
+      <span>🔗 github.com/soe09</span>
+      <span>⏳ 경력 6년 10개월</span>
+    </div>
+  </div>
+
+  <!-- Positioning -->
+  <div class="positioning">
+    <p>
+      <strong>"통합계정관리(IAM) 5년차, 금융권 보안 인증(PCI DSS 4.0) 경험 보유,<br>
+      3개 클라우드(AWS/Azure/GCP) 계정 연동 가능한 실무형 솔루션 리드"</strong>
+    </p>
+    <p style="margin-top:10px;font-size:14px;color:#555;line-height:1.7;">
+      SI 현장에서 7년 가까이 IAM 시스템을 설계·고도화·운영하며 현대카드, 현대커머셜, 금융감독원 등
+      대형 금융사 고객의 계정보안을 책임졌습니다. 단순 개발자를 넘어, 고객 요구를 시스템 설계로 풀고,
+      팀을 리딩하며, 글로벌 보안 인증까지 대응해온 실무형 리드입니다.
+    </p>
+    <div class="tags">
+      <span class="tag">🎯 희망직무: IAM 솔루션 PM / 계정보안 리드</span>
+      <span class="tag">💰 희망연봉: 5,000~6,000만원</span>
+    </div>
+  </div>
+
+  <!-- Key Achievements -->
+  <div class="section">
+    <div class="section-title">핵심 성과</div>
+    <div class="achievements">
+      <div class="achievement">
+        <div class="ach-title"><span class="ach-icon">🏛️</span> 금융권 IAM 시스템 운영 5년</div>
+        <div class="ach-desc">
+          현대카드·커머셜·금감원 통합계정관리시스템 설계·운영·고도화<br>
+          임직원 <span class="num-highlight">2,000+건/년</span> 권한 위임 자동화 → 결재 대기시간 <span class="num-highlight">60% 단축</span><br>
+          고아계정 탐지·정리로 불필요 계정 <span class="num-highlight">30% 감축</span>, 보안 리스크 제거
+        </div>
+      </div>
+      <div class="achievement">
+        <div class="ach-title"><span class="ach-icon">🔐</span> PCI DSS 4.0 글로벌 보안 인증 대응</div>
+        <div class="ach-desc">
+          Data Flow Diagram 도식화 + 인증 범위 분석 → <span class="num-highlight">글로벌 인증 심사 통과</span><br>
+          전사 부서 간 보안 요구사항 조율, 아키텍처 정렬 소명
+        </div>
+      </div>
+      <div class="achievement">
+        <div class="ach-title"><span class="ach-icon">🗄️</span> Oracle DB 성능 최적화</div>
+        <div class="ach-desc">
+          Hint / Query Plan 튜닝 / 인덱스 최적화로 <span class="num-highlight">야간 배치 67% 단축</span> (2시간 → 40분)<br>
+          다수 모듈 쿼리 성능 <span class="num-highlight">20~30% 향상</span>
+        </div>
+      </div>
+      <div class="achievement">
+        <div class="ach-title"><span class="ach-icon">☁️</span> Cloud 계정/자산 연동 (AWS / Azure / GCP)</div>
+        <div class="ach-desc">
+          RESTful API + 배치 기반 3개 클라우드 플랫폼 계정·자산 연동 자동화<br>
+          클라우드 환경에 최적화된 계정관리 정책 설계
+        </div>
+      </div>
+      <div class="achievement">
+        <div class="ach-title"><span class="ach-icon">🎓</span> 팀 리딩 및 신입 교육</div>
+        <div class="ach-desc">
+          신입사원 3명 교육 → <span class="num-highlight">2개월 만에 현장 실무 투입</span><br>
+          대리 PM 역할로 프로젝트 일정·고객 요구사항·배포 리스크 관리
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tech Skills -->
+  <div class="section">
+    <div class="section-title">기술 스택</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>🔧 Backend</h4>
+        <div class="skill-item"><span class="name">Java (Spring / JDBC)</span><span class="level"><span class="stars">★★★★★</span> 7년</span></div>
+        <div class="skill-item"><span class="name">Spring Boot / JPA</span><span class="level"><span class="stars">★★</span> 학습중</span></div>
+        <div class="skill-item"><span class="name">RESTful API 설계</span><span class="level"><span class="stars">★★★★</span> 4년</span></div>
+        <div class="skill-item"><span class="name">MyBatis</span><span class="level"><span class="stars">★★★★</span> 5년</span></div>
+      </div>
+      <div class="skill-group">
+        <h4>🗄️ Database</h4>
+        <div class="skill-item"><span class="name">Oracle (PL/SQL, Hint, 튜닝)</span><span class="level"><span class="stars">★★★★★</span> 5년</span></div>
+        <div class="skill-item"><span class="name">PostgreSQL</span><span class="level"><span class="stars">★★★</span> 1.5년</span></div>
+        <div class="skill-item"><span class="name">MySQL</span><span class="level"><span class="stars">★★★</span> 2년</span></div>
+      </div>
+      <div class="skill-group">
+        <h4>🎨 Frontend</h4>
+        <div class="skill-item"><span class="name">HTML / CSS / JavaScript</span><span class="level"><span class="stars">★★★★</span> 7년</span></div>
+        <div class="skill-item"><span class="name">jQuery, JSP</span><span class="level"><span class="stars">★★★★</span> 5년</span></div>
+        <div class="skill-item"><span class="name">Vue.js / Bootstrap</span><span class="level"><span class="stars">★★★</span> 학습중</span></div>
+      </div>
+      <div class="skill-group">
+        <h4>☁️ Cloud & DevOps</h4>
+        <div class="skill-item"><span class="name">AWS / Azure / GCP</span><span class="level"><span class="stars">★★★</span> 3년</span></div>
+        <div class="skill-item"><span class="name">SVN / 형상관리</span><span class="level"><span class="stars">★★★★</span> 7년</span></div>
+        <div class="skill-item"><span class="name">CentOS 서버 환경</span><span class="level"><span class="stars">★★★</span> 2년</span></div>
+      </div>
+      <div class="skill-group" style="grid-column:1/-1;">
+        <h4>🏛️ 도메인 전문성</h4>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span style="background:#e8f4f8;padding:4px 12px;border-radius:12px;font-size:13px;">IAM (통합계정관리/SSO/권한위임)</span>
+          <span style="background:#e8f4f8;padding:4px 12px;border-radius:12px;font-size:13px;">PCI DSS 4.0</span>
+          <span style="background:#e8f4f8;padding:4px 12px;border-radius:12px;font-size:13px;">금융보안 규제</span>
+          <span style="background:#e8f4f8;padding:4px 12px;border-radius:12px;font-size:13px;">Oracle 성능 튜닝</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div class="section">
+    <div class="section-title">경력</div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-company">넥시큐어시스템테크놀로지 — IAM 사업부</span>
+        <span class="exp-date">2021.04 ~ 재직중</span>
+      </div>
+      <div style="font-size:13px;color:#888;margin-bottom:8px;">대리/팀원 · 5년 3개월</div>
+
+      <div style="margin-top:12px;">
+        <div class="exp-sub">🔹 전사 통합계정관리(IAM) 시스템 고도화 및 운영 <span style="font-weight:400;color:#888;font-size:12px;">(2022.03 ~ 현재)</span></div>
+        <ul class="exp-detail">
+          <li>Spring Framework + Oracle 기반 IAM 시스템 전반 <span class="highlight">설계 및 개발 리드</span></li>
+          <li>임직원 신청서 작성·전자결재·권한위임 프로세스 전면 개선 → <span class="num-highlight">결재 대기시간 60% 단축</span></li>
+          <li>공통화 코드 모듈 구축 → 유지보수 시간 <span class="num-highlight">40% 절감</span>, 코드 일관성 확보</li>
+          <li>Oracle Hint / Query Plan 변경 / 인덱스 최적화 → <span class="num-highlight">배치 67% 단축</span>, 조회 20~30% 향상</li>
+          <li>레거시 JSP 화면 CSS/레이아웃 UI/UX 최적화</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:12px;">
+        <div class="exp-sub">🔹 권한위임 예약 시스템 — 배치 및 상태 제어 로직 설계 <span style="font-weight:400;color:#888;font-size:12px;">(2025.11~12 · 현대카드)</span></div>
+        <ul class="exp-detail">
+          <li>CUBE·인사ERP 이기종 시스템 연동 <span class="highlight">아키텍처 설계</span> (RESTful 연동)</li>
+          <li>일일 배치 기반 예약 도래 체크 + 권한 충돌(Conflict) 검증 분기 로직 구현</li>
+          <li>휴가/파견 시 권한위임 누락 문제를 <span class="highlight">사전 예약 시스템</span>으로 해결</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:12px;">
+        <div class="exp-sub">🔹 고아계정(Orphan Account) 관리 프로세스 개발 <span style="font-weight:400;color:#888;font-size:12px;">(2025.02~03 · 현대카드)</span></div>
+        <ul class="exp-detail">
+          <li>IAM 미연동 계정 탐지·식별·정리 프로세스 설계 및 개발</li>
+          <li>매일 자동 실행 배치 + 관리자 UI + 메일 알림 서비스 → 불필요 계정 <span class="num-highlight">30% 감축</span></li>
+        </ul>
+      </div>
+
+      <div style="margin-top:12px;">
+        <div class="exp-sub">🔹 PCI DSS 4.0 인증 대응 <span style="font-weight:400;color:#888;font-size:12px;">(2025.01~12)</span></div>
+        <ul class="exp-detail">
+          <li>Data Flow Diagram 도식화 + Scoping 분석 → <span class="num-highlight">글로벌 보안 인증 심사 통과</span></li>
+          <li>전사 거버넌스 회의 참여: 부서별 보안 요구사항 조율 및 아키텍처 정렬</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:12px;">
+        <div class="exp-sub">🔹 Cloud 계정관리 및 자산관리 <span style="font-weight:400;color:#888;font-size:12px;">(2024.05~08·11~12 / 2021.07~2022.03)</span></div>
+        <ul class="exp-detail">
+          <li><span class="highlight">AWS / Azure / GCP</span> 3대 클라우드 계정·자산 연동 RESTful API 구축</li>
+          <li>대리 PM 역할: 1인 개발 리딩, 일정·요구사항·배포 리스크 통제</li>
+          <li>신입사원 3명 교육 → <span class="num-highlight">2개월 만에 실무 투입</span> (Java/MVC/Oracle/CentOS)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item" style="margin-top:24px;padding-top:24px;border-top:1px solid #eee;">
+      <div class="exp-header">
+        <span class="exp-company">라임컴퍼니 — 솔루션 개발팀</span>
+        <span class="exp-date">2019.08 ~ 2021.04</span>
+      </div>
+      <div style="font-size:13px;color:#888;margin-bottom:8px;">사원 · 1년 9개월</div>
+
+      <div style="margin-top:12px;">
+        <div class="exp-sub">🔹 포스코에너지 전기생산 모니터링 시스템 — 회귀분석 예측 <span style="font-weight:400;color:#888;font-size:12px;">(2019.09~2020.02)</span></div>
+        <ul class="exp-detail">
+          <li>1차/2차 회귀분석 기반 전력 생산 이상 징후 예측 시스템 개발</li>
+          <li>jqGrid 실시간 예측 그래프 시각화, 진동수 입력 → 회귀곡선 실시간 반영</li>
+          <li><span class="num-highlight">전력 생산률 150% 향상</span>에 기여 (장비 수리 시점 예측 → 사전 정비)</li>
+          <li>디자이너 색상 팔레트 코드 레벨 공통화, WBS 일정보다 <span class="highlight">조기 완료</span></li>
+        </ul>
+      </div>
+
+      <div style="margin-top:12px;">
+        <div class="exp-sub">🔹 현대카드 계정관리 시스템 리뉴얼 <span style="font-weight:400;color:#888;font-size:12px;">(2020.03~2021.04)</span></div>
+        <ul class="exp-detail">
+          <li>Spring + Oracle 기반 고객 계정 관리 시스템 전면 리뉴얼</li>
+          <li>신청서 UI 개발 — jQuery 동적 데이터 처리 + 유효성 검사</li>
+          <li>공통화 코드 모듈 전면 도입 → 유지보수 효율 <span class="num-highlight">40% 향상</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education & Cert -->
+  <div class="section">
+    <div class="section-title">학력 · 자격</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+      <div>
+        <h4 style="font-size:14px;color:#0f3460;margin-bottom:8px;">🎓 학력</h4>
+        <div class="edu-row">
+          <span class="edu-school">청운대학교 (4년제)</span>
+          <span class="edu-major">컴퓨터공학</span>
+          <span class="edu-date">2010~2021 졸업</span>
+        </div>
+        <div class="edu-row">
+          <span class="edu-school">인항고등학교</span>
+          <span class="edu-major">이과계열</span>
+          <span class="edu-date">2007~2010 졸업</span>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:14px;color:#0f3460;margin-bottom:8px;">📜 자격 · 어학</h4>
+        <div class="edu-row">
+          <span class="edu-school">OPIC</span>
+          <span class="edu-major">영어</span>
+          <span class="edu-date">2026.02 · Intermediate Low</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    이 이력서는 경력 7년차 IAM 엔지니어의 솔루션 리드 전환을 위해 최적화되었습니다.
+  </div>
+</div>
+</body>
+</html>
