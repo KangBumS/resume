@@ -213,9 +213,18 @@ SI 현장에서 7년 가까이 IAM 시스템을 설계·고도화·운영하며 
 
 ---
 
-## 📝 포트폴리오 / GitHub 준비사항
+## 📝 포트폴리오 / 프로젝트
 
-https://github.com/soe09 에 IAM 샘플 프로젝트, Spring Boot + JPA 레포지토리 업로드 완료. 기술 블로그(velog) 운영 중.
+| 프로젝트 | URL | 설명 |
+|:--------|:----|:-----|
+| 🏠 **이력서 (GitHub)** | github.com/KangBumS/resume | 소스 코드 + 문서 |
+| 🌐 **이력서 페이지** | kangbums.github.io/resume | GitHub Pages |
+| 🃏 **PRISM TCG 포털** | viz.kangclaw.org/tcg-hub.html | TCG 시장 통합 플랫폼 |
+| 📊 **PRISM TCG 마켓** | viz.kangclaw.org/prism-v2.html | 실시간 시세/차트 |
+
+> **준비사항**
+> - Spring Boot + JPA + Oracle IAM 샘플 프로젝트 (GitHub 업로드)
+> - 기술 블로그 (velog / tistory) — IAM 도메인 지식 정리글 2~3개
 
 ---
 
