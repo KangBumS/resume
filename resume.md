@@ -9,7 +9,9 @@
 | 📧 | soe09@naver.com |
 | 📱 | 010-2609-4129 |
 | 📍 | 인천 미추홀구 |
-| 🔗 | github.com/soe09 |
+| 🔗 | github.com/KangBumS/resume |
+| 🌐 | kangbums.github.io/resume |
+| 🏠 | viz.kangclaw.org/resume.html |
 
 ---
 
