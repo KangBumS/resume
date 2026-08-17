@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>강범서 | IAM 솔루션 리드</title>
+<title>강범서 | 금융권 IAM 전문가 · 7년차</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
@@ -65,117 +65,89 @@ body {
 }
 .section-title::before {
   content: '';
-  display: inline-block;
-  width: 4px;
-  height: 18px;
-  background: #0f3460;
+  width: 4px; height: 18px;
+  background: linear-gradient(180deg, #0f3460, #4a90d9);
   border-radius: 2px;
 }
-
-/* Core Competencies */
-.competencies { display: flex; flex-wrap: wrap; gap: 8px; }
+.competencies { display: flex; flex-wrap: wrap; gap: 10px; }
 .comp-item {
-  background: #eef2ff;
-  border: 1px solid #dde4ff;
-  border-radius: 8px;
+  background: #f0f4fa;
+  border: 1px solid #dbe4f0;
+  color: #1e3a5f;
   padding: 8px 14px;
+  border-radius: 20px;
   font-size: 13px;
   font-weight: 500;
-  color: #0f3460;
 }
-
-/* Company Header */
 .company-box {
-  background: #f8f9ff;
-  border: 1px solid #e0e4f0;
+  background: #f8fafc;
   border-radius: 10px;
-  padding: 12px 18px;
-  margin-bottom: 16px;
-}
-.company-name { font-weight: 700; font-size: 15px; color: #0f3460; }
-.company-meta { font-size: 13px; color: #666; margin-top: 2px; }
-
-/* Project */
-.project {
-  margin-bottom: 20px;
-  padding: 14px 16px;
-  background: #fafbfc;
-  border-radius: 10px;
-  border-left: 3px solid #0f3460;
-}
-.project:last-child { margin-bottom: 0; }
-.project-title { font-weight: 600; font-size: 14px; color: #1a1a2e; }
-.project-meta {
-  font-size: 12px;
-  color: #888;
-  margin: 2px 0 8px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
 }
-.project ul { list-style: none; padding: 0; }
+.company-name { font-size: 17px; font-weight: 700; color: #1a1a2e; }
+.company-meta { font-size: 13px; color: #64748b; }
+.project {
+  border-left: 3px solid #4a90d9;
+  padding: 14px 0 14px 18px;
+  margin-bottom: 18px;
+}
+.project-title { font-size: 15px; font-weight: 700; color: #1a1a2e; }
+.project-meta {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  font-size: 12px; color: #64748b;
+  margin: 6px 0 10px;
+}
+.project ul { padding-left: 18px; }
 .project li {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #444;
-  padding-left: 14px;
-  position: relative;
-  margin-bottom: 2px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 4px;
 }
-.project li::before { content: '•'; position: absolute; left: 0; color: #0f3460; }
-.project .result {
-  margin-top: 6px;
-  font-size: 13px;
-  color: #e63946;
-  font-weight: 600;
-}
-.project .result::before { content: '→ '; }
-.tag {
-  display: inline-block;
-  background: #e8f4f8;
-  padding: 2px 8px;
-  border-radius: 10px;
-  font-size: 11px;
-  color: #0f3460;
-  margin-right: 4px;
-}
-
-/* Skills */
-.skills-wrap { display: flex; flex-wrap: wrap; gap: 16px; }
-.skill-group {
-  flex: 1;
-  min-width: 200px;
-  background: #fafafa;
+.project li strong { color: #0f3460; }
+.result {
+  margin-top: 8px;
+  background: #eef6ff;
   border-radius: 8px;
-  padding: 12px 14px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  color: #1e40af;
+  font-weight: 500;
 }
-.skill-group h4 { font-size: 13px; font-weight: 600; color: #0f3460; margin-bottom: 6px; }
-.skill-item { display: flex; justify-content: space-between; padding: 2px 0; font-size: 13px; }
-
-/* Self intro */
-.intro p { font-size: 14px; line-height: 1.7; color: #444; margin-bottom: 8px; }
+.skills-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
+.skill-group h4 { font-size: 13px; color: #0f3460; margin-bottom: 10px; }
+.skill-item {
+  display: flex; justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px dashed #e2e8f0;
+  font-size: 13px;
+  color: #334155;
+}
+.skill-item span:last-child { color: #0f3460; font-weight: 700; }
+.intro p { font-size: 14px; line-height: 1.8; color: #334155; margin-bottom: 10px; }
 .intro strong { color: #0f3460; }
-
 .footer {
+  background: #1a1a2e;
+  color: rgba(255,255,255,0.7);
   text-align: center;
-  padding: 20px;
-  background: #fafafa;
-  color: #999;
-  font-size: 12px;
-}
-@media (max-width: 600px) {
-  .header { padding: 32px 20px; }
-  .section { padding: 20px; }
-  .skills-wrap { flex-direction: column; }
+  padding: 18px;
+  font-size: 13px;
 }
 </style>
 </head>
 <body>
 <div class="resume">
 
+  <!-- Header -->
   <div class="header">
     <h1>강범서</h1>
-    <div class="badge">IAM 솔루션 리드 · Oracle 튜닝 · 보안 인증</div>
+    <div class="badge">금융권 IAM 전문가 · 7년차</div>
     <div class="info">
       <span>📧 soe09@naver.com</span>
       <span>📱 010-2609-4129</span>
@@ -183,19 +155,20 @@ body {
       <span>🔗 github.com/KangBumS/resume</span>
       <span>🌐 kangbums.github.io/resume</span>
     </div>
-    <div class="salary">총 경력 6년 10개월 · 직전 4,200만원 · 희망 5,000~6,000만원</div>
+    <div class="salary">총 경력 6년 10개월 · 직전 4,200만원 · 희망 5,500만원</div>
   </div>
 
   <!-- Competencies -->
   <div class="section">
     <div class="section-title">핵심 역량</div>
     <div class="competencies">
-      <span class="comp-item">🏛️ IAM 설계·운영 (현대카드·커머셜·금감원 5년)</span>
-      <span class="comp-item">🔧 Oracle 튜닝 (Hint/Plan, 배치 67% 단축)</span>
+      <span class="comp-item">🏛️ 금융권 IAM 5년 — 계정 수명주기 전체 설계 (신청→승인→퇴사→복원)</span>
+      <span class="comp-item">📐 시스템 설계 문서화 (화면·테이블·RDB 데이터 플로우)</span>
       <span class="comp-item">🔐 PCI DSS 4.0 글로벌 인증 대응</span>
+      <span class="comp-item">🔧 Oracle 튜닝 (배치 67% 단축)</span>
       <span class="comp-item">☁️ AWS/Azure/GCP Cloud 연동</span>
+      <span class="comp-item">🤖 AI Agent 실무 자동화 (OpenClaw)</span>
       <span class="comp-item">👥 프로젝트 리딩 (대리PM, 신입교육)</span>
-      <span class="comp-item">🤖 AI Agent 협업 (OpenClaw 자동화)</span>
     </div>
   </div>
 
@@ -209,14 +182,15 @@ body {
     </div>
 
     <div class="project">
-      <div class="project-title">◇ 전사 IAM 시스템 고도화</div>
+      <div class="project-title">◇ 전사 IAM 시스템 설계·고도화</div>
       <div class="project-meta">
         <span>📅 2022.03 ~ 현재</span>
         <span>👤 참여도 70%</span>
         <span>🎯 백엔드/프론트 개발 리드</span>
       </div>
       <ul>
-        <li>Spring Framework + Oracle 기반 IAM 시스템 설계 및 개발 리드</li>
+        <li>Spring Framework + Oracle 기반 IAM 시스템 <strong>설계 및 개발 리드</strong></li>
+        <li>계정 신청서 상신/결재 플로우·퇴사자 관리 등 <strong>계정 수명주기 전 영역 설계</strong> (화면·테이블·데이터 플로우 문서화)</li>
         <li>임직원 결재·권한위임 프로세스 개선 → 대기시간 <strong>60% 단축</strong></li>
         <li>공통화 코드 모듈 구축 → 유지보수 <strong>40% 절감</strong></li>
         <li>Oracle DB 튜닝(Hint/Query Plan/인덱스) → 배치 <strong>67% 단축</strong>, 조회 20~30% 향상</li>
@@ -233,7 +207,7 @@ body {
         <span>🏢 현대카드</span>
       </div>
       <ul>
-        <li>CUBE·인사ERP 이기종 시스템 연동 아키텍처 설계 (RESTful)</li>
+        <li>CUBE·인사ERP 이기종 시스템 연동 <strong>아키텍처 설계</strong> (RESTful)</li>
         <li>배치 기반 예약 도래 체크 + 권한 충돌 검증 로직 구현</li>
         <li>중복 위임 방지, 승인/취소 프로세스 설계</li>
       </ul>
@@ -303,10 +277,10 @@ body {
         <span>🎯 개인 프로젝트</span>
       </div>
       <ul>
-        <li>AI Agent(OpenClaw) 기반 시스템 개발·운영·모니터링 환경 구축</li>
+        <li>AI Agent(OpenClaw) 기반 시스템 <strong>개발·운영·모니터링 자동화 환경 구축</strong></li>
         <li>AI 협업 PRISM TCG 마켓 플랫폼 기획·개발·운영</li>
         <li>AI 기반 코드 분석/리팩토링/DB 튜닝 추천 자동화</li>
-        <li>Viz Server(viz.kangclaw.org) 운영 및 모니터링 자동화</li>
+        <li>자동화된 테스트·성능 실측·문서화 워크플로우 운영</li>
       </ul>
       <div class="result">AI Agent를 개발 생산성 도구로 실무에 적용</div>
     </div>
@@ -354,7 +328,7 @@ body {
         <div class="skill-item"><span>Java (Spring/JDBC)</span><span>7년</span></div>
         <div class="skill-item"><span>RESTful API</span><span>4년</span></div>
         <div class="skill-item"><span>MyBatis</span><span>5년</span></div>
-        <div class="skill-item"><span>Spring Boot/JPA</span><span>학습중</span></div>
+        <div class="skill-item"><span>Spring Boot/JPA</span><span>적용 중</span></div>
       </div>
       <div class="skill-group">
         <h4>🗄️ Database</h4>
@@ -366,6 +340,7 @@ body {
         <h4>🎨 Frontend</h4>
         <div class="skill-item"><span>HTML/CSS/JS</span><span>7년</span></div>
         <div class="skill-item"><span>jQuery/JSP</span><span>5년</span></div>
+        <div class="skill-item"><span>Vanilla JS 대시보드/차트</span><span>실무</span></div>
       </div>
       <div class="skill-group">
         <h4>☁️ Cloud & 기타</h4>
@@ -383,12 +358,13 @@ body {
       <p>청운대학교 컴퓨터공학과를 졸업하고 2019년부터 개발자로 일하고 있습니다. 라임컴퍼니에서 포스코에너지·현대카드 프로젝트를 거쳐, 현재 넥시큐어시스템테크놀로지에서 5년째 <strong>IAM(통합계정관리)</strong> 시스템만 전문으로 하고 있습니다.</p>
 
       <p><strong>핵심 강점</strong></p>
-      <p><strong>1. IAM 도메인 전문성</strong> — 현대카드, 현대커머셜, 금감원 등 금융권 고객사를 대상으로 통합계정관리시스템을 설계·운영하며 결재 대기시간 <strong>60% 단축</strong>, 배치 처리 <strong>67% 단축</strong> 등의 실질적인 성과를 냈습니다.</p>
-      <p><strong>2. Oracle DB 튜닝</strong> — Hint/Query Plan/인덱스 최적화로 시스템 전반의 성능을 <strong>20~30% 향상</strong>시킨 경험이 있습니다.</p>
-      <p><strong>3. 글로벌 보안 인증</strong> — PCI DSS 4.0 인증을 위해 Data Flow 분석 및 Scoping을 직접 수행하고 전사 부서를 조율하여 <strong>글로벌 심사를 통과</strong>시켰습니다.</p>
-      <p><strong>4. AI Agent 협업</strong> — AI Agent(OpenClaw)를 개발 환경에 도입하여 시스템 개발 자동화, 코드 분석, DB 튜닝 추천, 문서화 등에 활용 중입니다. AI와 협업하여 <strong>PRISM TCG</strong> 마켓 플랫폼을 기획·개발·운영하고 있습니다.</p>
+      <p><strong>1. 금융권 IAM 도메인 전문성</strong> — 현대카드, 현대커머셜, 금감원 등 금융권 고객사를 대상으로 계정 신청·결재·권한위임·퇴사자 관리·복원까지 <strong>계정 수명주기 전 영역</strong>을 설계·운영했습니다. 결재 대기시간 <strong>60% 단축</strong>, 배치 처리 <strong>67% 단축</strong> 등 실질 성과를 냈고, 설계 내용은 화면·테이블·데이터 플로우 문서로 정리해 두고 있습니다.</p>
+      <p><strong>2. 시스템 설계 문서화</strong> — 업무 요구를 화면 구성, 테이블 설계, RDB 데이터 플로우로 풀어내는 <strong>설계 문서화 능력</strong>을 갖췄습니다. 복잡한 결재·검증·배치 로직을 명확한 플로우로 정리해 개발·운영·감사 대응에 활용합니다.</p>
+      <p><strong>3. Oracle DB 튜닝</strong> — Hint/Query Plan/인덱스 최적화로 시스템 전반의 성능을 <strong>20~30% 향상</strong>시킨 경험이 있습니다.</p>
+      <p><strong>4. 글로벌 보안 인증</strong> — PCI DSS 4.0 인증을 위해 Data Flow 분석 및 Scoping을 직접 수행하고 전사 부서를 조율하여 <strong>글로벌 심사를 통과</strong>시켰습니다.</p>
+      <p><strong>5. AI Agent 협업</strong> — AI Agent(OpenClaw)를 개발 환경에 도입해 시스템 개발 자동화, 코드 분석, DB 튜닝 추천, 성능 실측, 문서화에 활용 중입니다. AI와 협업하여 <strong>PRISM TCG</strong> 마켓 플랫폼을 기획·개발·운영하고 있습니다.</p>
 
-      <p>또한 대리PM과 신입교육을 통해 팀 리딩 능력도 갖추고 있습니다. SI 경험을 바탕으로 <strong>솔루션 회사에서 IAM 제품의 기술적 완성도를 높이고, 고객 요구를 시스템 설계로 풀어내는 리드 개발자</strong>로 성장하고 싶습니다.</p>
+      <p>대리PM과 신입교육을 통해 팀 리딩 능력도 갖추고 있습니다. 금융권에서 검증된 IAM 설계 경험을 바탕으로, <strong>고객 요구를 시스템 설계로 풀어내는 IAM/보안 솔루션 리드 개발자</strong>로 성장하고 싶습니다.</p>
     </div>
   </div>
 
@@ -399,11 +375,12 @@ body {
       <span style="background:#eef2ff;padding:6px 12px;border-radius:8px;font-size:13px;">🔗 github.com/KangBumS/resume</span>
       <span style="background:#eef2ff;padding:6px 12px;border-radius:8px;font-size:13px;">🌐 kangbums.github.io/resume</span>
       <span style="background:#eef2ff;padding:6px 12px;border-radius:8px;font-size:13px;">🃏 viz.kangclaw.org/tcg-hub.html</span>
+      <span style="background:#eef2ff;padding:6px 12px;border-radius:8px;font-size:13px;">📄 IAM 설계 문서 (상신/결재 플로우·퇴사자 관리 — 공개용 마스킹 준비 중)</span>
     </div>
   </div>
 
   <div class="footer">
-    경력 7년차 IAM 엔지니어 · 솔루션 리드 전환 · AI 협업 개발자
+    금융권 IAM 5년 · 계정 수명주기 전체 설계 · AI 협업 개발자
   </div>
 </div>
 </body>
